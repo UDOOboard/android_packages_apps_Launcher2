@@ -3934,6 +3934,7 @@ public final class Launcher extends Activity
 
     /* Cling related */
     private boolean isClingsEnabled() {
+        if (android.os.Build.MANUFACTURER.equals("Seco")) return false;
         // disable clings when running in a test harness
         if(ActivityManager.isRunningInTestHarness()) return false;
 
